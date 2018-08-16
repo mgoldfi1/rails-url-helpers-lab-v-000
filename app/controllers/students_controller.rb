@@ -19,9 +19,11 @@ class StudentsController < ApplicationController
 
     def set_student
       @student = Student.find(params[:id])
-      # @student.update(active: !@student.active)
+      # 
     end
 
     def activate
         @student = Student.find(params[:id])
+        @student.update(active: !@student.active)
+      end
 end
