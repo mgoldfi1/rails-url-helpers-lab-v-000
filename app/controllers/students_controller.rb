@@ -8,9 +8,9 @@ class StudentsController < ApplicationController
   def show
     @student = Student.find_by_id(params[:id])
     if @student.active
-      "active"
+      @status = "active"
     else
-      "inactive"
+      @status = "inactive"
     end
   end
 
