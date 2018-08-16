@@ -1,3 +1,4 @@
+require 'pry'
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
   
@@ -19,5 +20,6 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
       @student.update(active: !@student.active)
+      binding.pry
     end
 end
