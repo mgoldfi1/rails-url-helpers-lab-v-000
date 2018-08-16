@@ -1,0 +1,4 @@
+class ActivateStudentController < ApplicationController
+
+
+end
